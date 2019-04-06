@@ -21,6 +21,7 @@ kotlin {
 
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
+            implementation 'com.android.support:appcompat-v7:27.1.1'
         }
         iOSMain.dependencies {
 
