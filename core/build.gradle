@@ -7,7 +7,7 @@ kotlin {
 
         fromPreset(iOSTarget, 'iOS') {
             binaries {
-                framework('core')
+                framework('PotatoCore')
             }
         }
 
@@ -22,6 +22,9 @@ kotlin {
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
         }
+        iOSMain.dependencies {
+
+        }
     }
 }
 
@@ -33,7 +36,7 @@ configurations {
 task packForXCode(type: Sync) {
     final File frameworkDir = new File(buildDir, "xcode-frameworks")
     final String mode = project.findProperty("XCODE_CONFIGURATION")?.toUpperCase() ?: 'DEBUG'
-    final def framework = kotlin.targets.iOS.binaries.getFramework("core", mode)
+    final def framework = kotlin.targets.iOS.binaries.getFramework("PotatoCore", mode)
 
     inputs.property "mode", mode
     dependsOn framework.linkTask
