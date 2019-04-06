@@ -2,7 +2,7 @@ package ca.antonious.potato
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import ca.antonious.core.getThings
+import ca.antonious.potato.core.getThings
 import ca.antonious.potato.core.getRegistry
 import kotlinx.android.synthetic.main.activity_main.*
 
